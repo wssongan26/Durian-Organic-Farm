@@ -1,0 +1,111 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container{
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(250, 235, 215, 0.979);
+    padding: 30px 50px;
+    width: 50%;
+    font-size: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+nav li{
+    color: black;
+}
+
+nav li:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+
+}
+
+input[type=text]{
+    width: 50%;
+    padding:   10px 10px ;
+    
+    margin: 8px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+button{
+    display: inline-block;
+    background-color: hsla(51, 100%, 50%, 0.422); /* durian yellow color */
+    color: #8B4513; /* brown color */
+    font-size: 16px;
+    padding: 6px 6px 6px 6px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 10px;
+    width: 160px;
+}
+button:hover {
+  background-color: #FFC107; /* darker durian yellow color on hover */
+}
+
+
+.btnGroup{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+section {
+    padding: 16px 61px 20px 6px;
+    padding-left : 130px;
+    
+   
+}
+
+.man {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100%; /* Set the height to 100% to center vertically within the parent */
+}
+
+/* Center the elements */
+.centered-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.centered-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.special-effect {
+    display: none; /* Hide the elements by default */
+    font-size: 20px; /* You can adjust the font size */
+    color: rgb(163, 6, 85); /* You can adjust the color */
+    /* Add any other desired styles for the special effect */
+}

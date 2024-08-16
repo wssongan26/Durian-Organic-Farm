@@ -1,0 +1,68 @@
+/*FAQ styles*/
+
+.faq-heading {
+    border-bottom: #777;
+    padding-bottom: 2em;
+    text-align: center;
+    padding-top: 2em;
+    font-family: "Helvetica";
+    text-shadow: 1px 1px #94666f;
+    color: rgb(116, 40, 71);
+    font-size: 2em;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -2em;
+    padding-bottom: 1em;
+}
+
+.line {
+    width: 90%;
+    margin: auto;
+}
+
+.question {
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 90%;
+    border: none;
+    outline: none;
+    margin: auto;
+    font-size: 1.6em;
+    letter-spacing: 0;
+}
+
+.answer {
+    margin: auto;
+    width: 50%;
+    padding: auto;
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    font-size: 1.3em;
+    color: rgb(73, 46, 46);
+    font-style: italic;
+}
+
+.active,
+.question:hover {
+    background-color: #F9F9F9;
+}
+
+.question:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}

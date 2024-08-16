@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <!--This page is designed for the applicant who wanted to apply Job with Victoria Recipe Bakery, the applicant is require to fill up all the information before they submit, the javascipt use to check and reset the form. -->
+<head>
+  <meta charset= "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Job Application form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../photo/durian-removebg-preview.ico" />
+    <link href="../css/ganweisong.bakeryjobform.css" rel="stylesheet" />
+    <link rel="icon" href="../photo/durian-removebg-preview.ico" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <script src="../js/main.js"></script>  
+</head>
+
+
+  <!--Body with empty box for using to fill up the personnel detail-->
+  <body>
+    <div class="container">
+      <!--logo can link back to homepage-->
+      <div><a href="../html/index.html" target="_blank"><img src="../photo/logo.png" width="200px" height="80px"></a></div>
+      <div class="title">Application Form to join as Durianian</div>
+  
+      <!--Form-->
+      <form name="applicate" id="applicate" method="get" target="_blank">
+        <div class="user-detailed">
+          <!--First Name-->
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input name="FirstName" type="text" placeholder="First Name" id="FirstName" required>
+          </div>
+          <!--Last Name-->
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input name="LastName" type="text" placeholder="Last Name" id="LastName" required>
+          </div>
+          <!--Email-->
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input name="Email" type="text" id="Email" placeholder="Enter Your Email" required>
+          </div>
+          <!--Phone Number-->
+          <div class="box">
+            <span class="detail">Phone Number</span>
+            <input name="applicantPhone" type="tel" placeholder="nnn-nnn nnnn" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+          </div>
+          <!--Date Available for interview-->
+  
+          <!--Position Title with selection-->
+          <div class="Box1">
+            <span class="details">Position Title</span>
+            <select value="Select the position" name="Jobtitle" id="desc1" name="desc1" required>
+              <option value="" selected>Please select your job type</option>
+       <option value="Software Engineer">Software Engineer</option>
+       <option value="QA Specialist">QA Specialist</option>
+       <option value="Senior Halal Executive">Senior Halal Executive</option>
+       <option value="Purchase Officer">Purchase Officer</option>
+       <option value="Business Analyst">Business Analyst</option>
+       <option value="Disctrict Manager">Disctrict Manager</option>
+       <option value="Accountant">Accountant</option>
+       <option value="Web developer">Web developer</option>
+       <option value="Full Stack Engineer">Full Stack Engineer</option>
+       <option value="Farmer">Farmer</option>
+       <option value="Manager">Manager</option>
+       <option value="Junior Farmer">Junior Farmer</option>
+       <option value="Lory Driver">Lory Driver</option>
+       <option value="Deliverer">Deliverer</option>
+            </select>
+          </div>
+          <!--City Name-->
+          <div class="Box1">
+            <span class="details">City</span>
+            <select name="cityName" id="cityBox" class="a" required>
+              <option value="" selected>Location</option>
+              <option value="Johor">Johor</option>
+              <option value="Melaka">Melaka</option>
+              <option value="Pahang">Pahang</option>
+              <option value="Perak">Perak</option>
+              <option value="Kedah">Kedah</option>
+              <option value="Pulau Pinang">Pulau Pinang</option>
+              <option value="Kelantan">Kelantan</option>
+              <option value="Sabah">Sabah</option>
+              <option value="Sarawak">Sarawak</option>
+            </select>
+          </div>
+          <!--Gender-->
+          <div class="gender-details">
+            <input name="applicantGender" id="maleGen" type="radio" required/>
+            <span class="details">Male</span>
+            <input name="applicantGender" id="femaleGen" type="radio" required/>
+            <span class="details">Female</span>
+          </div>
+          <!--Button use to submit or clear the form-->
+          <div class="button">
+            <input type="submit" value="Submit" id="submitButton"  onclick="myFunction()">
+            <input type="button" value="Reset" onclick="clearscreen()" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function clearscreen(){
+    if (confirm("Are you sure you want to clear your personal detail?") == 1){
+      document.applicate.reset();    //  document.forms[0].reset();   first form
+      window.location.reload();
+    }
+    }
+       var form = document.getElementById("applicate");
+       function myFunction() {
+      if (form.checkValidity()) {
+        alert("Adding Succesful!"); //if all the empty box have been fill up the alert message will prompt out
+      }
+    }
+      </script>
+   
+  </body>
+  
+</html>

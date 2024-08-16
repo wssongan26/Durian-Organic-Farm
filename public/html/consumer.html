@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Consumer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../photo/durian-removebg-preview.ico" />
+    <link href="../css/ganweisong.bakery_reset.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakerystyle.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakery2.css" rel="stylesheet" />
+    <link href="../css/contactus.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<!--header-->
+<div class="mainheader">
+    <div class="mainhead">
+        <div class="heading">
+            <a href="../html/index.html"><img src="../photo/logo.png" /></a>
+        </div>
+
+        <div class="headall">
+
+            <div class="heada">
+
+                <h1><i>Durian Tracking Application</i></h1>
+
+            </div>
+            <div class="headb">
+                <div class="heading1">
+                    <a href="../html/index.html" target="_blank" class="mov"><img src="../photo/Login.png"/></a>&nbsp; &nbsp;
+                    <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_blank" class="mov"><img src="../photo/whatsapp.png"/></a>&nbsp; &nbsp;
+                    <a href="mailto:wsong1026@gmail.com" target="_blank" class="mov"><img src="../photo/email.png"/></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <a id="bakery1" href="#"><img src="../photo/rb_navicon2.png" alt="" /></a>
+            <ul class="head">
+               
+                <li><a href="../html/index.html" >Home</a></li>
+                <li><a href="../html/about_us.html">About Us</a></li>
+                <li><a href="../html/login.html">Login</a></li>
+
+                <li><a href="../html/farm.html">Farm</a></li>
+                <li><a href="../html/distributor.html">Distributor</a></li>
+                <li><a href="../html/retailer.html">Retailer</a></li>
+                <li><a href="../html/consumer.html">Consumer</a></li>
+                <li><a href="../html/career.html">Career</a></li>
+                <li><a href="../html/location.html">Location</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<!--end header-->
+
+<body class="catmain" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(/photo/d1.png);"
+>
+    <h2>Consumer</h2>
+    <section class="customer" id="customer" style="display: block;">
+        <h1>Consumer</h1>
+        <div class="createCustomer">
+            <div>
+                <label for="customerName">Consumer Name</label>
+                <input type="text" name="customerName" id="customerName" placeholder="Enter Consumer Name">
+            </div>
+
+            <button class="btn" id="createCustomer" onclick="createCustomer()">Create Consumer</button>
+            <button class="btn" id="loginBtn" onclick="verifyCustomer()">Login Metamask</button>
+        </div>
+    
+        <div id="customerActions" style="display: none;">
+        
+            
+        
+    
+
+        <h2>Track Durian Consumer</h2>
+        <div class="trackDurian">
+            <div>
+                <label for="resultDurianWhereCus">Durian Id</label>
+                <input type="text" name="resultDurianWhereCus" id="resultDurianWhereCus" placeholder="Eg. 1">
+                <button class="btn" id="buttonTrackDurian">Track</button>
+                <p id="resultDurianStatus">Status: <span id="durianStatusText">Unknown</span></p>
+            </div>
+        </div>
+        
+
+        <h1>Buy Durian from Retailer?</h1>
+        <label for="durianID">Enter Durian ID for Purchase:</label>
+        <input type="text" id="durianID" placeholder="Durian ID" required>
+        <br>
+        <button type="button" onclick="passDurianToCustomer()">Yes</button>
+        <a href="index.html"><button type="button">No</button></a>
+
+<!-- Add a new button to trigger feedback input fields -->
+<button class="btn" id="addFeedbackButton" onclick="showFeedbackInputFields()" style="display: none;">Add Feedback</button>
+
+        <!-- Buy Durian -->
+        
+
+
+
+<h2>Durian Supply Chain - Add Feedback</h2>
+
+<div>
+    <label for="durianId">Durian ID:</label>
+    <input type="number" id="durianId" placeholder="Enter Durian ID">
+</div>
+
+<div>
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+</div>
+
+<div>
+    <h2>Rate(1-4= bad / 5=average / 6-8=Good / 9-10=Super Good)</h2>
+    <label for="sweetness">Sweetness (1-10):</label>
+    <input type="number" id="sweetness" min="1" max="10" placeholder="Enter sweetness rating">
+</div>
+
+<div>
+    <label for="taste">Taste (1-10):</label>
+    <input type="number" id="taste" min="1" max="10" placeholder="Enter taste rating">
+</div>
+
+<div>
+    <label for="fragrance">Fragrance (1-10):</label>
+    <input type="number" id="fragrance" min="1" max="10" placeholder="Enter fragrance rating">
+</div>
+
+<div>
+    <label for="creaminess">Creaminess (1-10):</label>
+    <input type="number" id="creaminess" min="1" max="10" placeholder="Enter creaminess rating">
+</div>
+
+<button id="addFeedbackBtn">Add Feedback</button>
+
+<div id="result"></div>
+ <!--Check-->
+ <h2 style="font-size: 25px; padding: 20px;">Check Durian Details</h2>
+ <div class="checkDurianDetails">
+   <div>
+       <label for="durianDetailsCus">Durian Id</label>
+       <input type="text" name="durianDetailsCus" id="durianDetailsCus" placeholder="Enter the durian id to track detail">
+       <button class="btn" id="buttonCheckDurian3" onclick="checkDurianDetails()">Check</button>
+
+       <div id="resultFarm">
+           <!-- <h1>Details of Farm</h1>
+           <p>Farm id: </p>
+           <p>Durian Type: </p>
+           <p>Durian Description: </p>
+           <p>Durian harvest date: </p> 
+           <p>Durian reach distributor date: 
+           <p>Durian reach retailer date: </p>-->
+       </div>
+   </div>
+</div>
+    
+    
+    <div id="feedbackResult">
+        <!-- Feedback results will be displayed here -->
+    </div>
+        </div>
+
+    </section>
+
+
+            <script>
+                function reset() {
+                    document.getElementById("durianID").value = "";
+                    document.getElementById("sweetness").value = "0";
+                    document.getElementById("taste").value = "0";
+                    document.getElementById("fragrance").value = "0";
+                    document.getElementById("creaminess").value = "0";
+                    document.getElementById("feedbackDescription").value = "";
+                }
+
+                function customerNav() {
+                    document.getElementById("farm").style.display = "none";
+                    document.getElementById("retailer").style.display = "none";
+                    document.getElementById("distributor").style.display = "none";
+                    document.getElementById("customer").style.display = "block";
+                }
+            </script>
+            <script src="/js/main.js"></script>
+</body>
+
+<div class="footer">
+    <footer>
+        <p>Copyright © 2023 Durian Organic Farm (M) Sdn Bhd<br/>Terms & Condition | Privacy Policy <br/> </a> E-mail: <a href="mailto:wsong1026@gmail.com">wsong1026@gmail.com</a>
+            <br/>Welcome to reach our consumer service via our <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_bank">whatsapp</a>!
+    </footer>
+
+</div>
+
+</html>

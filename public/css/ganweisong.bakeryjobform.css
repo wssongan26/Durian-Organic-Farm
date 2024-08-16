@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*Gan Wei Song create a css for job application form css*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Helvetica",sans-serif,serif;
+
+}
+/*Body of the page*/
+body{
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(
+      -45deg,
+      #e60073,
+      rgb(35, 166, 213),
+      rgb(35, 213, 154),
+      rgb(255, 153, 153),
+      #b2262a
+    )
+    0% 0% / 400% 400%;
+  animation: 8s ease 0s infinite normal none running gradient;
+  transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+/*Background with animation and colour*/
+@keyframes gradient {
+   0% {
+     background-position: 0% 50%;
+   }
+ 
+   50% {
+     background-position: 100% 50%;
+   }
+ 
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
+/*Container of the form*/
+.container{
+   max-width: 700px;
+   width: 100%;
+   background: #ffffff;
+   padding: 25px 30px;
+   border-radius: 50px 10px;
+   box-shadow: 5px 5px 30px;
+   background: rgba(212, 81, 21, 0.445);
+}
+/*Title of the form*/
+.container .title{
+   font-size: 25px;
+   font-weight: 500;
+   position: relative;
+}
+
+.container .title::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 100%;
+background: linear-gradient(135deg,#da2077,#9b59b6);
+}
+/*arrangement for each box in the form*/
+.container form .user-detailed{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 15px 0 12px 0;
+}
+/*space in betweem box-box*/
+form .user-detailed .input-box {
+   margin-bottom: 15px;
+   width:calc(100%/2-20px);
+}
+/*Input box title*/
+.user-detailed .input-box .details {
+   display: block;
+   font-weight: 500;
+   margin-bottom: 5px;
+}
+/*Input Box*/
+.user-detailed .input-box input{
+height: 45px;
+width: 100%;
+outline: none;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+border-bottom-width:2px;
+transition: all 0.3s ease;
+}
+
+.user-detailed .input-box input:focus,
+.user-detailed .input-box input:valid{
+border-color: #9b59b6;
+}
+/*Gender Title*/
+form .gender-details {
+font-size: 16px;
+font-weight: 500;
+
+}
+/*Radio type arrangement*/
+form .gender-details{
+display: flex;
+width: 30%;
+margin: 14px 0;
+justify-content: space-between;
+align-items: center;
+}
+
+.gender-details .category label{
+   display: flex;
+   align-items: center;
+}
+
+/*------------Button design---------*/
+form .button{
+   height: 45px;
+   margin: 15px 0;
+   display: inline-flex;
+   justify-content: space-evenly;
+   width: 100%;
+}
+form .button input{
+   height: 100%;
+   width: 40%;
+   outline: none;
+   color: #ffffff;
+   border: none;
+   font-size: 18px;
+   font-weight: 500;
+   border-radius: 5px;
+   letter-spacing: 1px;
+   background: linear-gradient(135deg, #760c7b, #e60073);
+}
+
+form .button input:hover{
+   background: linear-gradient(135deg, #71b7e6, #e60073);
+}
+/*----Design for date and Time------*/
+form .user-detailed .box {
+   margin-bottom: 15px;
+}
+.user-detailed .box .detail {
+   display: block;
+   font-weight: 500;
+   margin-bottom: 5px;
+   width:180px;
+}
+.box input{
+  
+      height: 45px;
+      width: 100%;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      border-bottom-width:2px;
+      transition: all 0.3s ease;
+      padding: 10px 0;
+      
+}
+/*-----Design for City name and Job Title------*/
+form .user-detailed .Box1 {
+   margin-bottom: 15px;
+}
+.user-detailed .Box1 .details {
+   display: block;
+   font-weight: 500;
+   margin-bottom: 5px;
+   width:180px;
+}
+.Box1 select{
+   height: 45px;
+   width: 100%;
+   outline: none;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   font-size: 16px;
+   border-bottom-width:2px;
+   transition: all 0.3s ease;
+   padding: 10px 0;
+}
+.user-detailed .gender-details .details {
+   display: block;
+   font-weight: 500;
+   margin-bottom: 5px;
+   
+}
+
+/*Check validity for name, email and phone number*/
+input#FirstName:focus:valid,
+input#LastName:focus:valid,
+input#phoneBox:focus:valid,
+input#Email:focus:valid{
+background: url(tick.png) right/contain no-repeat;
+}
+/*In wrong format the picture will prompt out*/
+input#FirstName:focus:invalid,
+input#LastName:focus:invalid,
+input#phoneBox:focus:invalid,
+input#Email:focus:invalid
+{
+background: url(wrong.png) right/contain no-repeat;
+}
+
+
+/*when the page move to handphone width*/
+@media (max-width:585px) {
+   .container{
+      max-width: 100%;
+   }
+form .user-detailed .input-box{
+   margin-bottom: 15px;
+   width: 100%;
+}
+
+form .gender-details .input-box{
+   margin-bottom: 15px;
+   width: 100%;
+}
+form .gender-details .category{
+   width: 100%;
+}
+
+.container form .user-detailed{
+   max-height: 300px;
+   overflow-y: scroll;
+}
+.user-detailed::-webkit-scrollbar{
+   width: 0;
+}
+
+}

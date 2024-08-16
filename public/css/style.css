@@ -1,0 +1,292 @@
+
+html {
+    font-size: 18px;
+}
+
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*home styles */
+div.home {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+   
+    width: 100%;
+}
+
+div.home h1,
+div.map h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px #d59da7;
+    letter-spacing: 1px;
+    color: rgb(65, 46, 46);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+   
+    padding-bottom: 20px;
+}
+
+div.home p {
+    font-size: 1.5em;
+    line-height: 3em;
+    color: rgb(65, 46, 46);
+    font-style: italic;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+
+.mySlides1 img{
+    height: 500px;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Caption text */
+
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    height: 15px;
+    width: 13px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: brown;
+}
+
+
+/* Fading animation */
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0.2
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+
+/* On smaller screens, decrease text size    */
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 10px
+    }
+    p,
+    h2 {
+        font-size: 10px
+    }
+}
+
+@media only print {
+    .text {
+        font-size: 10px
+    }
+    h2 {
+        display: none
+    }
+    p {
+        font-size: 10px
+    }
+    img {
+        page-break-inside: avoid
+    }
+    p {
+        page-break-after: always
+    }
+}
+
+
+/*product styles*/
+
+.title {
+    font-size: 3em;
+    font-family: monospace;
+    text-align: center;
+    color: rgb(116, 40, 71);
+    text-shadow: 2px 2px #94666f;
+}
+
+.cake .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cake .col {
+    max-width: 300px;
+    background: rgb(222, 208, 189);
+    height: 28em;
+    flex: 20em;
+    padding: 2.5em;
+    margin: 2em;
+    border-radius: 2em;
+    box-shadow: 0 .3em 0.6em rgb(52, 44, 48);
+    text-align: center;
+}
+
+.cake .col h2 {
+    padding: 1.2em 0em;
+    color: rgb(95, 52, 104);
+    font-size: 1.5em;
+}
+
+.cake .col h3 {
+    color: gray;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.cake .col:hover {
+    transition: .5s ease;
+    transform: translateY(-.5em);
+}
+
+.cake .col img {
+    height: 15em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cake .col .price p {
+    position: absolute;
+    width: 7em;
+    height: auto;
+    margin-top: -1.0em;
+    margin-left: 3.3em;
+    padding: 0.8em 0.1em;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    border-radius: 4em;
+    background: rgb(213, 190, 190);
+    color: rgb(5, 1, 39);
+}
+
+
+/*footer styles*/
+
+.footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 0 solid #e9ecef;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffd9cc;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #51585f;
+    line-height: 1.5;
+}
+
+
+/*location styles*/
+
+div.map p {
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', sans-serif;
+    font-style: italic;
+    color: rgb(65, 46, 46);
+}
+
+div.map {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    padding-top: 1em;
+}
+
+
+/*business hour table styles*/
+
+table.hours {
+    width: 80%;
+    border: 2px solid grey;
+    border-collapse: separate;
+    font-size: 1.1em;
+    color: rgb(136, 93, 62);
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.hours caption {
+    font-size: 1.3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    padding: 1.5em;
+}
+
+table.hours tr {
+    text-align: center;
+}
+
+table.hours td,
+table.hours th {
+    border: 1px solid grey;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+thead.name {
+    background-color: rosybrown;
+}
+
+
+

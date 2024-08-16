@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+h2{ 
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    color: rgb(116, 40, 71);
+    text-shadow: 1px 1px #94666f;
+    padding: 20px;
+    margin-bottom:20px ;
+}
+
+
+p{
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    color: rgb(116, 40, 71);
+}
+a{
+   
+    color: rgb(116, 40, 71);
+}
+a:hover{
+    color: blue;
+}
+fieldset{
+    margin-top: 25px;
+    margin-left: 25%;
+    width: 50%;
+    border: 5px solid rgb(95, 52, 104);
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(222, 208, 189);
+}
+
+div.facebook{
+    margin-top: 10px;
+    text-align: center;
+}
+img.facebook{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+
+
+}
+img.instagram{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    
+}
+input[type="submit"]{
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    color: rgb(95, 52, 104);
+    background-color: rgb(222, 208, 189);
+
+}
+.submit{
+    text-align: center;
+}

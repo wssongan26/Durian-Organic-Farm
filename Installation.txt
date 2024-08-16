@@ -1,0 +1,75 @@
+﻿Instructions on how to initiate the front-end and back-end for our Blockchain Application
+
+
+1. Open Ganache and click Quickstart or Open Workbench.
+
+
+2. Open the METAMASK and add a new GANACHE network. 
+RPC URL: http://localhost:7545
+CHAIN ID: 1337
+CURRENCY SYMBOL: ETH
+
+
+3. Import at least 5 accounts to Metamask from GANACHE which are Farmer, Distributor, Retailer,  Customer, and Job Applicant (if more than 4, the extra accounts can be another farmer, distributor, retailer, customer and job applicant)
+
+
+4. Copy and paste the main.sol code to remix IDE.
+
+
+5. Set the Environment in Remix to Ganache Provider and Endpoint change to 7545
+
+
+6. Deploy the code. (The current account that deploys the code will become Farmer)
+
+
+7. Open command prompt/ cmd app in the Start, import the file location with the javascript by using >cd 'file path'', then enter.
+(if the file don't have node_modules and need to install by ' npm install express')
+
+
+8. In cmd type node server.js inside the cmd/comand prompt. The port is open on 5020 will appear. 
+
+
+9. Open the browser, and type http://127.0.0.1:5020/ in the URL (the 5020 can be changed based on your setting in the server.js file).
+
+
+10. Use one of the imported accounts, click the Farmer at the header, then do the same for distributor, retailer, and customer but with different accounts each.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Steps on using the functions in the front-end UI linked to the back-end
+
+
+Login
+1. First connect to Metamask then check the Metamask address of the currently linked account will be displayed.
+2. For the smart contract, to link it will need the user’s transaction address and ABI which will be generated when the code in Remix is deployed.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+*****************************Each account/address only can register as one roles (Farm, Distributor, Retailer, Consumer)********************************
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Farm
+1. Next, we are required to create a new Farm account with a non-registered Metamask account. After creating the farm only click the “Log in with Metamask button” to add the durian for type and durian tree name.
+
+Distributor
+1. The Distributor needs to register with a new Metamask address. After registering, click the “Log in with Metamask button” to receive the durian from the Farm.
+
+Retailer
+1. Then we will need to go to the Retailer page to create a retailer account or just click the “Log in with Metamask button” to log in with the account that has been created.
+2. After the retailer has logged in with the created retailer account, the retailer will be able to receive their desired durian from the Distributor by inserting the Durian ID they want. (only can done by retailer)
+3. Then click the “Receive Durian from Distributor” button. If the desired durian is available from the distributor side, then the retailer can retrieve it from the distributor by paying the required amount of gas fees.
+
+
+Consumers
+1. For the customer side, new customers have to insert their name to create a customer account or just log in with the existing account.
+2. After the customer has logged in, the customer can track their desired durian by typing the Durian ID they want to find and clicking the “Track” button to track the durian.
+3. Customers can also explore the details of the durian by typing the Durian ID.
+4. Then customers can buy their desired durians from the retailer and a few review questions will be given to the customer to do some feedback and rating to help us to improve the quality of our durians. But it is not compulsory to answer the questions. (only can done by consumer)
+
+
+Job Applicant
+1. The work seeker can browse the career page and scroll down to the pags and press the apply job button.
+2. It will bring the job applicant to fill up the application form, the job applicant can submit it and store the information in the blockchain(solidity).
+
+

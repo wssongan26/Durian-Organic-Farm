@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<!--This page consumer can view the what career or job have been offer to the user who wanted to find job. The salary also provided forr each of job Title and the application button have been put at the bottom part, it will link to job application form. Mostly use division with class to allocate each category of information.-->
+<!--css code-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Retailer</title>
+
+    <link rel="icon" href="../photo/durian-removebg-preview.ico" />
+    <link href="../css/ganweisong.bakery_reset.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakerystyle.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakery2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<!--picture-->
+<div class="mainheader">
+    <div class="mainhead">
+        <div class="heading">
+            <a href="../html/index.html"><img src="../photo/logo.png" /></a>
+        </div>
+        <div class="headall">
+            <div class="heada">
+                <h1><i>Durian Tracking Application</i></h1>
+            </div>
+            <div class="headb">
+                <div class="heading1">
+                    <a href="../html/index.html" target="_blank" class="mov"><img src="../photo/Login.png" /></a>&nbsp; &nbsp;
+                    <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_blank" class="mov"><img src="../photo/whatsapp.png" /></a>&nbsp; &nbsp;
+                    <a href="mailto:wsong1026@gmail.com" target="_blank" class="mov"><img src="../photo/email.png" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <a id="bakery1" href="#"><img src="../photo/rb_navicon2.png" alt="" /></a>
+            <ul class="head">
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/about_us.html">About Us</a></li>
+                <li><a href="../html/login.html">Login</a></li>
+                <li><a href="../html/farm.html">Farm</a></li>
+                <li><a href="../html/distributor.html">Distributor</a></li>
+                <li><a href="../html/retailer.html">Retailer</a></li>
+                <li><a href="../html/consumer.html">Consumer</a></li>
+                <li><a href="../html/career.html">Career</a></li>
+                <li><a href="../html/location.html">Location</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<!--body-->
+
+<body class="catmain" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(/photo/d1.png);"
+>
+    <!--menu-->
+    <h2 class="menu" style="font-size: 25px; padding: 20px;">Retailer</h2>
+    < <section class="retailer" id="retailer" style="display: block;">
+      <h1>Retailer</h1>
+      <div class="createRetail">
+          <div>
+              <label for="retailName">Retailer Name</label>
+              <input type="text" name="retailName" id="retailName" placeholder="Enter retailer name">
+          </div>
+          <div>
+              <label for="retailLocation">Retailer Location</label>
+              <input type="text" name="retailLocation" id="retailLocation" placeholder="Enter retailer location">
+          </div>
+          <button class="btn" id="createRetail" onclick="createRetail()">Create Retailer</button>
+          <button class="btn" id="loginBtn" onclick="verifyRetail()">Log in with Metamask</button>
+      </div>
+      
+     
+      <div id="receiveDurianDiv" style="display: none;">
+        <h1>Receive Durian from Distributor</h1>
+          <label for="durianID">Enter Durian ID:</label>
+          <input type="text" name="durianID" id="durianID" placeholder="Eg. 1">
+          <button class="btn" id="receiveDurianBtn" onclick="receiveDuriantoRetail()">Receive</button>
+          
+
+          <!-- Track-->
+
+
+          <h2 style="font-size: 25px; padding: 20px;">Track Durian Retailer</h2>
+          <div class="trackDurian">
+              <div>
+                  <label for="resultDurianWhereCus">Durian Id</label>
+                  <input type="text" name="resultDurianWhereCus" id="resultDurianWhereCus" placeholder="Eg. 1">
+                  <button class="btn" id="buttonTrackDurianRetailer">Track</button>
+                  <p id="resultDurianStatus">Status: <span id="durianStatusText">Unknown</span></p>
+              </div>
+          </div>
+          <!--Check-->
+          <h2 style="font-size: 25px; padding: 20px;">Check Durian Details</h2>
+          <div class="checkDurianDetails">
+            <div>
+                <label for="durianDetailsCus">Durian Id</label>
+                <input type="text" name="durianDetailsCus" id="durianDetailsCus" placeholder="Eg. 1">
+                <button class="btn" id="buttonCheckDurian2" onclick="checkDurianDetails()">Check</button>
+
+                <div id="resultFarm">
+                    <!-- <h1>Details of Farm</h1>
+                    <p>Farm id: </p>
+                    <p>Durian Type: </p>
+                    <p>Durian Description: </p>
+                    <p>Durian harvest date: </p> 
+                    <p>Durian reach distributor date: 
+                    <p>Durian reach retailer date: </p>-->
+                </div>
+
+
+
+            </div>
+        </div>
+
+      </div>
+
+      <script>
+          function retailerNav() {
+              document.getElementById("farm").style.display = "none";
+              document.getElementById("retailer").style.display = "block";
+              document.getElementById("distributor").style.display = "none";
+              document.getElementById("customer").style.display = "none";
+          }
+      </script>
+      <script src="web3.min.js"></script>
+      <script src="/js/main.js"></script>
+  </section>
+</body>
+<div class="footer">
+    <footer>
+        <p>Copyright © 2023 Durian Organic Farm (M) Sdn Bhd<br/>Terms & Condition | Privacy Policy <br/> </a> E-mail: <a href="mailto:wsong1026@gmail.com">wsong1026@gmail.com</a>
+            <br/>Welcome to reach our consumer service via our <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_bank">whatsapp</a>!
+    </footer>
+</div>
+
+</html>

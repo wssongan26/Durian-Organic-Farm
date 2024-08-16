@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset= "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homepage</title>
+    <link rel="icon" href="../photo/durian-removebg-preview.ico" />
+    <link href="../css/ganweisong.bakery_reset.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakerystyle.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/ganweisong.bakery2.css" rel="stylesheet" />
+    </head>
+    <div class="mainheader">
+        <div class="mainhead">
+            <div class="heading"><a href="../html/index.html"><img src="../photo/logo.png"/></a>
+            </div>
+       
+            <div class="headall">
+    
+                <div class="heada">
+                    
+                    <h1><i>Durian Tracking Application</i></h1>
+                    
+                </div>
+                <div class="headb">
+                    <div class="heading1">
+                        <a href="../html/index.html" target="_blank" class="mov"><img src="../photo/Login.png"/></a>&nbsp; &nbsp;
+                    <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_blank" class="mov"><img src="../photo/whatsapp.png"/></a>&nbsp; &nbsp;
+                    <a href="mailto:wsong1026@gmail.com" target="_blank" class="mov"><img src="../photo/email.png"/></a></div> 
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <header >
+            <nav><a id="bakery1" href="#"><img src="../photo/rb_navicon2.png" alt="" /></a>
+               <ul class="head">
+                <li><a href="../html/index.html" >Home</a></li>
+                <li><a href="../html/about_us.html">About Us</a></li>
+                <li><a href="../html/login.html">Login</a></li>
+
+                <li><a href="../html/farm.html">Farm</a></li>
+                <li><a href="../html/distributor.html">Distributor</a></li>
+                <li><a href="../html/retailer.html">Retailer</a></li>
+                <li><a href="../html/consumer.html">Consumer</a></li>
+                <li><a href="../html/career.html">Career</a></li>
+                <li><a href="../html/location.html">Location</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+               </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+
+<body class="catmain">
+
+    <!---home--->
+    <div class="home">
+        <div class="slideshow-container">
+
+            <div class="mySlides1 fade">
+                
+                <a href="../photo/scene.jpg" target="_blank"> <img src="../photo/scene.jpg" style="width:100%"></a>
+                <div class="text">Durian Tree</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                
+                <a href="../photo/scene1.jpg"><img src="../photo/scene1.jpg" style="width:100%"></a>
+                <div class="text">Durian Farm</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                
+                <a href="../photo/scene2.jpg"><img src="../photo/scene2.jpg" style="width:100%"></a>
+                <div class="text">Durian</div>
+            </div>
+
+        </div>
+        <br/>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides1");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+
+                }
+
+                slideIndex++; //slideIndex=0+1=1    1+1=2  2+1=3   3+1=4  4>3
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                // 4th round 4>3 slideIndex =1   
+
+                for (i = 0; i < dots.length; i++) {
+                    // i=0   dots.length=3   0<3   i=0+1=1  1+1=2  2+1=3  0<3  
+                    dots[i].className = dots[i].className.replace("active", "dot");
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 4 seconds
+
+            }
+        </script>
+
+        <h1>Quality products made with love & passion. We prepare the best taste in the town. </h1>
+        <p>Our Farm is set up to cater specifically to the durian lover. Our durians have all the good taste.</p>
+    </div>
+
+
+    <!---product--->
+    <div>
+        <h1 class="title "><br>Best Selling Durian</h1>
+        <div class="cake ">
+            <div class="row ">
+                <div class="col ">
+                    <img src="../photo/musangking.jpg " alt=" ">
+
+                    <div class="price ">
+                        <p>RM 60</p>
+                    </div>
+
+                    <h2>Musang King</h2>
+                    <h3>4 kg</h3>
+
+                </div>
+                <div class="col ">
+                    <img src="../photo/d24.jpg " alt=" ">
+
+                    <div class="price ">
+                        <p>RM26.45</p>
+                    </div>
+
+                    <h2>D24</h2>
+                    <h3>1 kg</h3>
+
+                </div>
+                <div class="col ">
+                    <img src="../photo/redprawn.jpg " alt=" ">
+
+                    <div class="price ">
+                        <p>Rm79</p>
+                    </div>
+
+                    <h2>Red Prawn</h2>
+                    <h3>5 kg</h3>
+
+                </div>
+                <div class="col ">
+                    <img src="../photo/blackthorn.jpg " alt=" ">
+
+                    <div class="price ">
+                        <p>RM 70</p>
+                    </div>
+
+                    <h2>Black Thorn</h2>
+                    <h3>5 kg</h3>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<div class="footer">
+    <footer>
+        <p>Copyright © 2023 Durian Organic Farm (M) Sdn Bhd<br/>Terms & Condition | Privacy Policy <br/> </a> E-mail: <a href="mailto:wsong1026@gmail.com">wsong1026@gmail.com</a>
+            <br/>Welcome to reach our consumer service via our <a href="https://wa.me/60128868207?text=Hello%20there%20I%20interested%20in%20your%20cake!" target="_bank">whatsapp</a>!
+    </footer>
+</div>
+
+</html>
